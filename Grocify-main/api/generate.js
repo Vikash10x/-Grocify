@@ -1,4 +1,9 @@
+import dotenv from 'dotenv';
 import knowledgeBase from "../src/components/Chatbot/knowledgeBase.js";
+
+// Load environment variables for local development
+dotenv.config();
+
 console.log("KnowledgeBase loaded:", knowledgeBase?.context?.slice(0, 50));
 // Helper: decide which KB snippet to include based on user input
 function getRelevantKBSnippet(userMessage) {
